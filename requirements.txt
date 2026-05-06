@@ -1,9 +1,9 @@
 fastapi
 uvicorn
-scikit-learn==1.4.2
+scikit-learn==1.3.2
 joblib
 mysql-connector-python
-pandas
+pandas==2.1.4
 numpy==1.26.4
 python-multipart
 pydantic
