@@ -10,11 +10,11 @@ app = FastAPI()
 # ============ DATABASE CONNECTION ============
 def get_db():
     return mysql.connector.connect(
-        host="roundhouse.proxy.rlwy.net",
+        host="trolley.proxy.rlwy.net",
         user="root",
         password="uTiiPZuZyKZVUlnqhdiJTasRluxXrmNz",
         database="railway",
-        port=3306
+        port=53980
     )
 
 # ============ LOAD MODELS ============
