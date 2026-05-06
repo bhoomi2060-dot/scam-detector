@@ -10,16 +10,15 @@ app = FastAPI()
 # ============ DATABASE CONNECTION ============
 def get_db():
     return mysql.connector.connect(
-        host="roundhouse.proxy.rlwy.net",
-        user="root",
-        password="uTiiPZuZyKZVUlnqhdiJTasRluxXrmNz",
-        database="railway",
-        port=3306
-    )
+        host="your-cloud-db-host",
+        user="your-username",
+        password="your-password",
+        database="scam_detector"
+    ) 
 
 # ============ LOAD MODELS ============
 import os
-folder = os.path.join(os.path.dirname(__file__), "models")")
+folder = os.path.join(os.path.dirname(__file__), "models")
 sms_model   = joblib.load(f"{folder}/sms_model.pkl")
 tfidf_sms   = joblib.load(f"{folder}/tfidf_sms.pkl")
 email_model = joblib.load(f"{folder}/email_model.pkl")
