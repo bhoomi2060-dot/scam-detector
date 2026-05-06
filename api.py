@@ -19,7 +19,7 @@ def get_db():
 
 # ============ LOAD MODELS ============
 import os
-folder = os.path.join(os.path.dirname(__file__), "models")")
+folder = os.path.join(os.path.dirname(__file__), "models")
 sms_model   = joblib.load(f"{folder}/sms_model.pkl")
 tfidf_sms   = joblib.load(f"{folder}/tfidf_sms.pkl")
 email_model = joblib.load(f"{folder}/email_model.pkl")
