@@ -4,6 +4,6 @@ scikit-learn==1.4.2
 joblib
 mysql-connector-python
 pandas
-numpy
+numpy==1.26.4
 python-multipart
 pydantic
