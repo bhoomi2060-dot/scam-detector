@@ -123,6 +123,8 @@ def check_sms(data: TextInput):
     result = sms_model.predict(vec)[0]
     proba = sms_model.predict_proba(vec)[0]
     confidence = str(round(max(proba) * 100)) + '%'
+    if max(proba) < 0.65:
+        result = "Uncertain - Manual Review"
     return {"result": result, "confidence": confidence}
 
 @app.post("/check_email")
@@ -131,6 +133,8 @@ def check_email(data: TextInput):
     result = email_model.predict(vec)[0]
     proba = email_model.predict_proba(vec)[0]
     confidence = str(round(max(proba) * 100)) + '%'
+    if max(proba) < 0.65:
+        result = "Uncertain - Manual Review"
     return {"result": result, "confidence": confidence}
 
 @app.get("/")
